@@ -1,0 +1,34 @@
+:root {
+    --vermelho: #EB1C2E;
+    --amarelo: #FBE750; 
+    --azul: #0076BC;
+    --cinza: #313131;
+    --aclaro: #9FDCF8;
+}
+
+.campo {
+    width: 80px;
+    height: 80px;
+    border: none;
+    font-size: 5em;
+    text-align: center;
+    background-color: #b3b3b3;
+    color: white;
+    border: none;
+}
+
+.correto {
+    background-color: var(--azul);
+    color: white;
+}
+
+.meio {
+    background-color: var(--vermelho);
+    color: white;
+}
+
+.color-box {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jornal Kitty</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/jogo.css">
+
+    <style>
+
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /*------------------ desktop ------------------*/
+        @media only screen and (min-width: 1025px) {
+            .container {
+                display: grid;
+                grid-template-columns: auto 200px 800px auto;
+                grid-template-rows: 70px auto 140px;
+                grid-template-areas:
+                    "header header header header"
+                    ". main main ."
+                    "footer footer footer footer";
+            }
+
+            .item-b {
+                display: grid;
+                grid-template-columns: 600px 300px;
+                grid-template-rows: auto;
+                grid-template-areas: 
+                "section aside";
+                grid-gap: 40px 40px;
+            }
+        }
+
+        /*------------------ tablet ------------------*/
+        @media screen and (min-width: 771px) and (max-width: 1024px) {
+            .container {
+                display: grid;
+                grid-template-columns: auto 200px 800px auto;
+                grid-template-rows: 70px auto 140px;
+                grid-template-areas:
+                    "header header header header"
+                    ". main main ."
+                    "footer footer footer footer";
+            }
+
+            .item-b {
+                display: grid;
+                grid-template-columns: 600px 300px;
+                grid-template-rows: auto;
+                grid-template-areas: 
+                "section aside";
+                grid-gap: 40px 40px;
+            }
+        }
+    </style>
+</head>
+
+<body class="container">
+    <header class="item-a">
+        <a href="index.html" id="logo-a">
+            <span class="logo">
+                <img src="imgs/logo.png" alt="Cabeça da Hello Kitty" id="logo-img">
+                <p id="logo-p">Jornal Kitty</p>
+            </span>
+        </a>
+
+        <nav>
+            <ul>
+                <li><a href="noticia.html" class="li-link">Notícias</a></li>
+                <li><a href="jogo.html" class="li-link" style="font-weight: bold;">Termo</a></li>
+            </ul>
+            <input type="search" name="" id="" placeholder="Buscar">
+        </nav>
+    </header>
+
+    <main class="item-b">
+        <section id="main-section" class="item-d">
+            <article id="art_principal">
+                <h3 style="margin-bottom: 30px">Termo</h3>
+                
+                <table>
+                    <tr onkeydown="if(event.key === 'Enter') { verificar(1); }">
+                        <td><input type="text" name="" id="input1_1" class="campo" maxlength="1" oninput="validarEntrada(this);mudarFoco(this, 'input1_2')"></td>
+                        <td><input type="text" name="" id="input1_2" class="campo" maxlength="1" oninput="validarEntrada(this);mudarFoco(this, 'input1_3')"></td>
+                        <td><input type="text" name="" id="input1_3" class="campo" maxlength="1" oninput="validarEntrada(this);mudarFoco(this, 'input1_4')"></td>
+                        <td><input type="text" name="" id="input1_4" class="campo" maxlength="1" oninput="validarEntrada(this);mudarFoco(this, 'input1_5')"></td>
+                        <td><input type="text" name="" id="input1_5" class="campo" maxlength="1" oninput="validarEntrada(this)"></td>
+                    </tr>
+                    <tr onkeydown="if(event.key === 'Enter') { verificar(2); }">
+                        <td><input type="text" name="" id="input2_1" class="campo" maxlength="1" oninput="validarEntrada(this);mudarFoco(this, 'input2_2')" ></td>
+                        <td><input type="text" name="" id="input2_2" class="campo" maxlength="1" oninput="validarEntrada(this);mudarFoco(this, 'input2_3')" ></td>
+                        <td><input type="text" name="" id="input2_3" class="campo" maxlength="1" oninput="validarEntrada(this);mudarFoco(this, 'input2_4')" ></td>
+                        <td><input type="text" name="" id="input2_4" class="campo" maxlength="1" oninput="validarEntrada(this);mudarFoco(this, 'input2_5')" ></td>
+                        <td><input type="text" name="" id="input2_5" class="campo" maxlength="1" oninput="validarEntrada(this)" ></td>
+                    </tr>
+                    <tr onkeydown="if(event.key === 'Enter') { verificar(3); }">
+                        <td><input type="text" name="" id="input3_1" class="campo" maxlength="1" oninput="validarEntrada(this);mudarFoco(this, 'input3_2')" ></td>
+                        <td><input type="text" name="" id="input3_2" class="campo" maxlength="1" oninput="validarEntrada(this);mudarFoco(this, 'input3_3')" ></td>
+                        <td><input type="text" name="" id="input3_3" class="campo" maxlength="1" oninput="validarEntrada(this);mudarFoco(this, 'input3_4')" ></td>
+                        <td><input type="text" name="" id="input3_4" class="campo" maxlength="1" oninput="validarEntrada(this);mudarFoco(this, 'input3_5')" ></td>
+                        <td><input type="text" name="" id="input3_5" class="campo" maxlength="1" oninput="validarEntrada(this)" ></td>
+                    </tr>
+                    <tr onkeydown="if(event.key === 'Enter') { verificar(4); }">
+                        <td><input type="text" name="" id="input4_1" class="campo" maxlength="1" oninput="validarEntrada(this);mudarFoco(this, 'input4_2')" ></td>
+                        <td><input type="text" name="" id="input4_2" class="campo" maxlength="1" oninput="validarEntrada(this);mudarFoco(this, 'input4_3')" ></td>
+                        <td><input type="text" name="" id="input4_3" class="campo" maxlength="1" oninput="validarEntrada(this);mudarFoco(this, 'input4_4')" ></td>
+                        <td><input type="text" name="" id="input4_4" class="campo" maxlength="1" oninput="validarEntrada(this);mudarFoco(this, 'input4_5')" ></td>
+                        <td><input type="text" name="" id="input4_5" class="campo" maxlength="1" oninput="validarEntrada(this)" ></td>
+                    </tr>
+                    <tr onkeydown="if(event.key === 'Enter') { verificar(5); }">
+                        <td><input type="text" name="" id="input5_1" class="campo" maxlength="1" oninput="validarEntrada(this);mudarFoco(this, 'input5_2')" ></td>
+                        <td><input type="text" name="" id="input5_2" class="campo" maxlength="1" oninput="validarEntrada(this);mudarFoco(this, 'input5_2')" ></td>
+                        <td><input type="text" name="" id="input5_3" class="campo" maxlength="1" oninput="validarEntrada(this);mudarFoco(this, 'input5_3')" ></td>
+                        <td><input type="text" name="" id="input5_4" class="campo" maxlength="1" oninput="validarEntrada(this);mudarFoco(this, 'input5_4')" ></td>
+                        <td><input type="text" name="" id="input5_5" class="campo" maxlength="1" oninput="validarEntrada(this)" ></td>
+                    </tr>
+                </table>
+
+            </article>
+        </section>
+
+        <aside>
+            <h4>Como jogar</h4>
+            <p>Adivinhe a palavra misteriosa digitando nos 5 campos e aperte Enter.</p>
+            <span class="logo">
+                <div class="color-box correto"></div> <p>Letra e sua posição estão corretas</p>
+            </span>
+            <span class="logo">
+                <div class="color-box meio"></div> <p>Letra correta porém posição não</p>
+            </span>
+            <span class="logo">
+                <div class="color-box campo"></div> <p>Letra ausente da palavra</p>
+            </span>
+
+
+            <h4 id="h4-resposta">Resposta</h4>
+            <button type="button" class="art1-btn" id="abrir2">Clique para ver a resposta</button>
+            <div id="box-resposta" class="escondida">
+                <h3 id="resposta">Kitty</h3>
+            </div>
+        </aside>
+
+    </main>
+    <footer id="footer" class="item-c">
+        <section id="footer-section">
+            <span class="logo">
+                <img src="imgs/logo.png" alt="Cabeça da Hello Kitty" id="logo-img">
+                <p id="logo-p">Jornal Kitty</p>
+            </span>
+            <article>
+                <h4 class="footer-h">Jogos</h4>
+                <p class="section-p">Termo</p>
+                <p class="section-p">Curiosidade do dia</p>
+            </article>
+            <article>
+                <h4 class="footer-h">Artigos</h4>
+                <p class="section-p">Ranking de Personagens da Sanrio de 2023</p>
+                <p class="section-p">Hello Kitty comemora aniversário de 49 anos</p>
+                <p class="section-p">Jogo do Apple Arcade com Hello Kitty é <br> indicado aos The Game Awards 2023</p>
+            </article>
+        </section>
+        <img src="imgs/footer.png" alt="Hello Kitty e seus amigos" id="img-footer">
+        <p id="p-footer">Lumah Pereira 2CAW 2023.2</p>
+    </footer>
+
+    <script src="./js/jogo.js"></script>
+    <script src="./js/script2.js"></script>
+</body>
+</html>
